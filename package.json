@@ -1,0 +1,33 @@
+{
+  "name": "tool-project",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "es",
+    "lib",
+    "index.d.ts"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./dist/counter.js",
+    "require": "./dist/counter.umd.cjs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
+  }
+}
