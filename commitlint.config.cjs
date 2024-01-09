@@ -11,7 +11,7 @@ const types = [
   'chore',
   'revert'
 ];
-//若出现module is not define，只需在eslint的配置env中设置node:true
+//若出现module is not
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {

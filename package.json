@@ -3,6 +3,10 @@
   "private": false,
   "version": "0.0.0",
   "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "tools-repo-config-init"
+  ],
   "files": [
     "es",
     "lib",
@@ -19,13 +23,17 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "changelog": "conventional-changelog -p -i CHANGELOG.md -s",
+    "version": "bumpp"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
+    "bumpp": "^9.2.1",
+    "conventional-changelog-cli": "^4.1.0",
     "eslint": "^8.56.0",
     "husky": "^8.0.0",
     "lint-staged": "^15.2.0",
@@ -41,5 +49,12 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
